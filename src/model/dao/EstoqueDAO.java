@@ -38,5 +38,16 @@ public class EstoqueDAO {
             throw new RuntimeException(excecao);
         }
     }
+    
+    public Estoques procuraItem(String item){
+        String sql = "SELECT * FROM estoque WHERE nome_material = ?";
+        
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, Integer.parseInt(item));
+        } catch(SQLException excecao){ 
+            throw new RuntimeException(excecao);
+        }
+    }
 }
 

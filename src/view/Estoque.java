@@ -4,6 +4,7 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
 import model.dao.EstoqueDAO;
 /**
  *
@@ -149,6 +150,11 @@ public class Estoque extends javax.swing.JInternalFrame {
     private void btnCadastrarItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarItemActionPerformed
         Estoque e = new Estoque();
         e.setItem(txtItem.getText());
+        e.setQuantidade(Integer.parseInt(txtQuantidade.getText()));
+        
+        EstoqueDAO dao = new EstoqueDAO();
+        dao.adiciona(e);
+        JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
     }//GEN-LAST:event_btnCadastrarItemActionPerformed
 
 
