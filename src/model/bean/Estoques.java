@@ -9,8 +9,14 @@ package model.bean;
  * @author Lari
  */
 public class Estoques {
-    private String item;
-    private int quantidade;
+
+    public int getId_item() {
+        return Id_item;
+    }
+
+    public void setId_item(int Id_item) {
+        this.Id_item = Id_item;
+    }
 
     public String getItem() {
         return item;
@@ -27,5 +33,8 @@ public class Estoques {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-    
+    private int Id_item;
+    private String item;
+    private int quantidade;
+
 }
