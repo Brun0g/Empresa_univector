@@ -44,7 +44,7 @@ public class ClientesDAO {
 
             stmt.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
+            // JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         
    
         } catch (SQLException ex) {
@@ -80,7 +80,7 @@ public class ClientesDAO {
             _cliente.setCpf(rs.getString("cpf"));
             clientes.add(_cliente);
             
-            JOptionPane.showMessageDialog(null, "Salvo na lista com sucesso!");
+            //JOptionPane.showMessageDialog(null, "Salvo na lista com sucesso!");
 
             }
         } catch (SQLException ex) {
