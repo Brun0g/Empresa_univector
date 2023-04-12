@@ -4,6 +4,7 @@
  */
 package view;
 
+import model.dao.EstoqueDAO;
 /**
  *
  * @author Lari
@@ -71,6 +72,11 @@ public class Estoque extends javax.swing.JInternalFrame {
         jLabel2.setText("Quantidade");
 
         btnCadastrarItem.setText("Cadastrar");
+        btnCadastrarItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarItemActionPerformed(evt);
+            }
+        });
 
         btnExcluirItem.setText("Excluir");
 
@@ -139,6 +145,11 @@ public class Estoque extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCadastrarItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarItemActionPerformed
+        Estoque e = new Estoque();
+        e.setItem(txtItem.getText());
+    }//GEN-LAST:event_btnCadastrarItemActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
