@@ -97,7 +97,18 @@ public class Estoque extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Quantidade");
 
+        txtQuantidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtQuantidadeActionPerformed(evt);
+            }
+        });
+
         btnBuscarItem.setText("Buscar");
+        btnBuscarItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarItemActionPerformed(evt);
+            }
+        });
 
         tabelaEstoque.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -265,7 +276,7 @@ public class Estoque extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnExcluirItemStateChanged
 
     private void btnExcluirItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirItemActionPerformed
-        if (tabelaEstoque.getSelectedRow() != -1) {
+        if (tabelaEstoque.getSelectedRow() !=-1) {
 
             Estoques e = new Estoques();
             EstoqueDAO dao = new EstoqueDAO();
@@ -282,6 +293,14 @@ public class Estoque extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Selecione um item para excluir.");
         }
     }//GEN-LAST:event_btnExcluirItemActionPerformed
+
+    private void txtQuantidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQuantidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtQuantidadeActionPerformed
+
+    private void btnBuscarItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarItemActionPerformed
+        readJTableForDesc(txtBuscarItem.getText());
+    }//GEN-LAST:event_btnBuscarItemActionPerformed
 
     
 public static void main(String args[]) {

@@ -67,7 +67,7 @@ public class EstoqueDAO {
             while(rs.next()){
             Estoques _estoque = new Estoques();
             
-            _estoque.setQuantidade(rs.getInt("id_material"));
+            _estoque.setId_item(rs.getInt("id_material"));
             _estoque.setItem(rs.getString("nome_material"));
             _estoque.setQuantidade(rs.getInt("estoque_atual"));
             estoque.add(_estoque);
@@ -117,29 +117,29 @@ public class EstoqueDAO {
         return estoque;
 
     }
-    public void update(Estoques e) {
+    //public void update(Estoques e) {
 
-        Connection con = ConnectionFactory.getConnection();
+    //    Connection con = ConnectionFactory.getConnection();
         
-        PreparedStatement stmt = null;
+    //   PreparedStatement stmt = null;
 
-        try {
-            stmt = con.prepareStatement("UPDATE estoque SET id_material = ?, nome_material = ? ,estoque_material = ?");
+    //    try {
+    //        stmt = con.prepareStatement("UPDATE estoque SET id_material = ?, nome_material = ? ,estoque_material = ?");
             
-            stmt.setInt(1, e.getId_item());
-            stmt.setString(2,e.getItem());
-            stmt.setInt(3,e.getQuantidade());
+    //        stmt.setInt(1, e.getId_item());
+    //        stmt.setString(2,e.getItem());
+    //        stmt.setInt(3,e.getQuantidade());
 
-            stmt.executeUpdate();
+    //        stmt.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
-        } finally {
-            ConnectionFactory.closeConnection(con, stmt);
-        }
+    //        JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
+    //    } catch (SQLException ex) {
+    //        JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
+    //    } finally {
+    //        ConnectionFactory.closeConnection(con, stmt);
+    //    }
 
-    }
+    //}
     public void delete(Estoques e) {
         Connection con = ConnectionFactory.getConnection();
         
