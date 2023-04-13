@@ -74,13 +74,13 @@ public class Estoque extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         txtItem = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtQuantidade = new javax.swing.JTextField();
         txtBuscarItem = new javax.swing.JTextField();
         btnBuscarItem = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabelaEstoque = new javax.swing.JTable();
         btnCadastrarItem = new javax.swing.JButton();
         btnExcluirItem = new javax.swing.JButton();
+        txtQuantidade = new javax.swing.JFormattedTextField();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,12 +96,6 @@ public class Estoque extends javax.swing.JInternalFrame {
         jLabel1.setText("Item");
 
         jLabel2.setText("Quantidade");
-
-        txtQuantidade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtQuantidadeActionPerformed(evt);
-            }
-        });
 
         btnBuscarItem.setText("Buscar");
         btnBuscarItem.addActionListener(new java.awt.event.ActionListener() {
@@ -167,6 +161,8 @@ public class Estoque extends javax.swing.JInternalFrame {
             }
         });
 
+        txtQuantidade.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#######"))));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -213,7 +209,7 @@ public class Estoque extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCadastrarItem)
                     .addComponent(btnExcluirItem))
@@ -294,10 +290,6 @@ public class Estoque extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_btnExcluirItemActionPerformed
 
-    private void txtQuantidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtQuantidadeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtQuantidadeActionPerformed
-
     private void btnBuscarItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarItemActionPerformed
         readJTableForDesc(txtBuscarItem.getText());
     }//GEN-LAST:event_btnBuscarItemActionPerformed
@@ -348,6 +340,6 @@ public static void main(String args[]) {
     private javax.swing.JTable tabelaEstoque;
     private javax.swing.JTextField txtBuscarItem;
     private javax.swing.JTextField txtItem;
-    private javax.swing.JTextField txtQuantidade;
+    private javax.swing.JFormattedTextField txtQuantidade;
     // End of variables declaration//GEN-END:variables
 }
