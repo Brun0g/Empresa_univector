@@ -19,8 +19,8 @@ import java.util.logging.Logger;
  */
 public class ConnectionFactory {
 
-    private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/empresa_univector";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/empresa_univector_3d";
     private static final String USER = "root";
     private static final String PASS = "";
 
