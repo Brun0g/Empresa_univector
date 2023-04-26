@@ -1,4 +1,4 @@
-                                                #################### RESUMO ####################
+#################### RESUMO ####################
                                                 
 Este é um projeto de sistema desenvolvido na plataforma NetBeans, utilizando o mysql-connector 8.0.32.jar para conexão com o banco de dados.
 
@@ -6,7 +6,7 @@ O sistema foi criado com o objetivo de fornecer funcionalidades básicas de cada
 
 O sistema está conectado a um banco de dados MySQL, utilizando a tabela SQL postada neste repositório.
 
-                                      #################### Como executar o sistema ####################
+#################### Como executar o sistema ####################
                                       
 Certifique-se de ter o NetBeans instalado na sua máquina.
 
@@ -18,7 +18,7 @@ Certifique-se de ter o mysql-connector 8.0.32.jar na sua biblioteca de classes.
 
 Execute o sistema através da tela principal.
 
-                                     #################### Tecnologias utilizadas ####################
+#################### Tecnologias utilizadas ####################
                                     
 NetBeans
 Java
